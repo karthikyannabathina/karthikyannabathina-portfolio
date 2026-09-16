@@ -6,7 +6,7 @@ Built by{" "} <a
          rel="noreferrer"
        > <strong>Me</strong> </a>
 . Source code available on{" "} <a
-         href="https://github.com/karthhikyadav"
+         href="https://github.com/karthikyannabathina"
          target="_blank"
          rel="noreferrer"
        > <strong>GitHub</strong> </a>

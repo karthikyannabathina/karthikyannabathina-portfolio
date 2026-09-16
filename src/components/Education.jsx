@@ -34,7 +34,7 @@ function Education() {
             </p>
 
             <p className="education-card__description">
-              Final-year Computer Science & Engineering student with
+              Computer Science & Engineering student with
               a strong interest in software development. Developing
               practical experience in full-stack web development,
               backend engineering, databases, data structures &

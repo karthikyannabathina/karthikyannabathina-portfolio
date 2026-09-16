@@ -1,54 +1,30 @@
-import { FiExternalLink, FiGithub } from "react-icons/fi";
+import { FiArrowUpRight, FiExternalLink, FiGithub } from "react-icons/fi";
 import projects from "../data/projects";
 
 function Projects() {
-  const featuredProjects = projects.filter(
-    (project) => project.featured,
-  );
+  const featuredProjects = projects.filter((project) => project.featured);
 
   return (
     <section id="projects" className="section projects">
       <div className="container">
-
-        {/* ================================
-            HEADER
-        ================================= */}
-
         <div className="projects__header">
-          <p className="section-label">
-            03 — Selected Work
-          </p>
-
-          <h2 className="section-title">
-            Projects I've
-            <span> actually built.</span>
-          </h2>
+          <div>
+            <p className="section-label">03 — Selected Work</p>
+            <h2 className="section-title">
+              Projects I've <span>actually built.</span>
+            </h2>
+          </div>
 
           <p className="section-description">
-            A selection of applications where I worked across
-            frontend interfaces, backend services, databases,
-            authentication, real-time communication, and
-            infrastructure.
+            A selection of applications where I worked across frontend interfaces,
+            backend services, databases, authentication, real-time communication,
+            and infrastructure.
           </p>
         </div>
 
-
-        {/* ================================
-            PROJECT GRID
-        ================================= */}
-
         <div className="projects__list">
-
           {featuredProjects.map((project, index) => (
-            <article
-              className="project-card"
-              key={project.id}
-            >
-
-              {/* ================================
-                  PROJECT IMAGE
-              ================================= */}
-
+            <article className="project-card" key={project.id}>
               {project.image && (
                 <div className="project-card__image">
                   <img
@@ -56,78 +32,37 @@ function Projects() {
                     alt={`${project.title} preview`}
                     loading="lazy"
                   />
+                  <span className="project-card__image-label">Featured project</span>
                 </div>
               )}
 
-
-              {/* ================================
-                  PROJECT CONTENT
-              ================================= */}
-
               <div className="project-card__content">
-
-                {/* Number */}
-
-                <div className="project-card__number">
-                  0{index + 1}
+                <div className="project-card__meta">
+                  <span className="project-card__number">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="project-card__category">{project.category}</span>
                 </div>
 
+                <h3 className="project-card__title">{project.title}</h3>
+                <p className="project-card__description">{project.description}</p>
 
-                {/* Category */}
-
-                <p className="project-card__category">
-                  {project.category}
-                </p>
-
-
-                {/* Title */}
-
-                <h3 className="project-card__title">
-                  {project.title}
-                </h3>
-
-
-                {/* Description */}
-
-                <p className="project-card__description">
-                  {project.description}
-                </p>
-
-
-                {/* Technologies */}
-
-                <div className="project-card__technologies">
+                <div className="project-card__technologies" aria-label="Technologies">
                   {project.technologies.map((technology) => (
-                    <span key={technology}>
-                      #{technology}
-                    </span>
+                    <span key={technology}>{technology}</span>
                   ))}
                 </div>
 
-
-                {/* Highlights */}
-
                 {project.highlights?.length > 0 && (
-                  <div className="project-card__highlights">
-                    {project.highlights.map((highlight) => (
-                      <span key={highlight}>
-                        {highlight}
-                      </span>
+                  <ul className="project-card__highlights">
+                    {project.highlights.slice(0, 5).map((highlight) => (
+                      <li key={highlight}>{highlight}</li>
                     ))}
-                  </div>
+                  </ul>
                 )}
-
               </div>
 
-
-              {/* ================================
-                  PROJECT BUTTONS
-              ================================= */}
-
               <div className="project-card__links">
-
-                {/* LEFT — LIVE PROJECT */}
-
                 {project.live ? (
                   <a
                     href={project.live}
@@ -136,19 +71,17 @@ function Projects() {
                     className="project-card__link project-card__link--live"
                   >
                     <span>Live Project</span>
-                    <FiExternalLink />
+                    <FiArrowUpRight />
                   </a>
                 ) : (
                   <span
-                    className="project-card__link project-card__link--live project-card__link--disabled"
+                    className="project-card__link project-card__link--disabled"
+                    aria-disabled="true"
                   >
                     <span>Live Project</span>
                     <FiExternalLink />
                   </span>
                 )}
-
-
-                {/* RIGHT — GITHUB */}
 
                 {project.github && (
                   <a
@@ -161,14 +94,10 @@ function Projects() {
                     <FiGithub />
                   </a>
                 )}
-
               </div>
-
             </article>
           ))}
-
         </div>
-
       </div>
     </section>
   );

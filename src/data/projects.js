@@ -37,8 +37,8 @@ const projects = [
       "Dockerized development environment",
     ],
 
-    github: "",
-    live: "",
+    github: "https://github.com/karthikyannabathina/TradeX",
+    live: "https://trade-x-gold.vercel.app",
   },
 
   {

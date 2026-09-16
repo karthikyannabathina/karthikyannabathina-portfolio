@@ -18,7 +18,7 @@ function Contact() {
           </p>
 
           <a
-            href="karthikyannabathina4444@gmail.com"
+            href="mailto:karthikyannabathina4444@gmail.com"
             className="contact__email"
           >
             Gmail↗
@@ -26,7 +26,7 @@ function Contact() {
 
           <div className="contact__links">
             <a
-              href="https://github.com/karthhikyadav"
+              href="https://github.com/karthikyannabathina"
               target="_blank"
               rel="noreferrer"
             >

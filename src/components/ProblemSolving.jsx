@@ -1,88 +1,77 @@
-const codingProfiles = [
+const learningTopics = [
   {
-    platform: "LeetCode",
-    count: "80+",
-    label: "Problems Solved",
+    title: "TypeScript",
     description:
-      "Practicing data structures and algorithms through problem solving.",
-    link: "",
+      "Improving type safety and building more maintainable React and Node.js applications.",
   },
   {
-    platform: "HackerRank",
-    count: "120+",
-    label: "Challenges",
+    title: "Next.js",
     description:
-      "Completed coding challenges through HackerRank and MountBlue.",
-    link: "",
+      "Learning modern full-stack React patterns, routing, rendering, and application architecture.",
   },
   {
-    platform: "GeeksforGeeks",
-    count: "5",
-    label: "Problems Solved",
+    title: "Microservices",
     description:
-      "Additional DSA practice through GeeksforGeeks.",
-    link: "",
+      "Exploring service boundaries, API gateways, authentication, and distributed application design.",
+  },
+  {
+    title: "Apache Kafka",
+    description:
+      "Learning event-driven architecture, producers, consumers, and asynchronous communication.",
+  },
+  {
+    title: "Prisma",
+    description:
+      "Exploring type-safe database access and modern data modeling with PostgreSQL.",
+  },
+  {
+    title: "BullMQ",
+    description:
+      "Learning background jobs, queues, workers, and asynchronous processing with Redis.",
+  },
+  {
+    title: "Kubernetes",
+    description:
+      "Building foundational knowledge of container orchestration and deployment.",
   },
 ];
 
-function ProblemSolving() {
+function Learning() {
   return (
-    <section
-      id="problem-solving"
-      className="section problem-solving"
-    >
+    <section id="learning" className="section learning">
       <div className="container">
-        <div className="problem-solving__header">
+        <div className="learning__header">
           <p className="section-label">
-            05 — Problem Solving
+            06 — Currently Learning
           </p>
 
           <h2 className="section-title">
-            I practice
-            <span> problem solving.</span>
+            Always
+            <span> learning.</span>
           </h2>
 
           <p className="section-description">
-            Regular practice with data structures and algorithms
-            has helped me improve my problem-solving approach and
-            understand how to reason about time and space
-            complexity.
+            I'm continuously expanding my backend and
+            infrastructure knowledge, with a focus on
+            TypeScript, distributed systems, and scalable
+            application architecture.
           </p>
         </div>
 
-        <div className="coding-grid">
-          {codingProfiles.map((profile) => (
-            <article
-              className="coding-card"
-              key={profile.platform}
-            >
-              <div className="coding-card__top">
-                <span>{profile.platform}</span>
-                <span>↗</span>
-              </div>
+        <div className="learning__list">
+          {learningTopics.map((topic, index) => (
+            <article className="learning-item" key={topic.title}>
+              <span className="learning-item__number">
+                0{index + 1}
+              </span>
 
-              <strong className="coding-card__count">
-                {profile.count}
-              </strong>
+              <h3>{topic.title}</h3>
 
-              <p className="coding-card__label">
-                {profile.label}
-              </p>
+              <p>{topic.description}</p>
 
-              <p className="coding-card__description">
-                {profile.description}
-              </p>
-
-              {profile.link && (
-                <a
-                  href={profile.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="coding-card__link"
-                >
-                  View Profile ↗
-                </a>
-              )}
+              <span className="learning-item__arrow">
+                ↗
+              </span>
             </article>
           ))}
         </div>
@@ -91,4 +80,4 @@ function ProblemSolving() {
   );
 }
 
-export default ProblemSolving;
+export default Learning;

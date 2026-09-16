@@ -30,22 +30,24 @@ function Hero() {
 
         <div className="hero__content">
 
-          <div className="hero__badge">
+          <div className="hero__eyebrow">
             <span className="hero__badge-dot" />
-            <span>Hi, I'm Karthik</span>
+            <span>Full Stack Developer</span>
+            <span className="hero__eyebrow-line" />
+            <span className="hero__eyebrow-status">Available</span>
           </div>
 
           <h1 className="hero__title">
             Building software
             <br />
             that solves{" "}
-            <span>real problems.</span>
+            <span>real problems</span>
           </h1>
 
           <p className="hero__description">
-            Full Stack Developer focused on building fast,
-            reliable, and thoughtfully designed digital
-            products with modern web technologies.
+            I build fast, reliable, and thoughtfully designed web
+            products — from polished interfaces to scalable backend
+            systems and APIs
           </p>
 
           {/* ACTIONS */}
@@ -56,8 +58,8 @@ function Hero() {
               href="#projects"
               className="hero__button hero__button--primary"
             >
-              View My Work
-              <span>→</span>
+              <span>View My Work</span>
+              <span aria-hidden="true">↗</span>
             </a>
 
             <a
@@ -73,7 +75,7 @@ function Hero() {
 
           <div className="hero__availability">
             <span className="hero__availability-dot" />
-            <span>Available for opportunities</span>
+            <span>Open to internships & full-time opportunities</span>
           </div>
 
           {/* SOCIALS */}
@@ -81,7 +83,7 @@ function Hero() {
           <div className="hero__socials">
 
             <a
-              href="https://github.com/karthikyannabathina"
+              href="https://github.com/karthhikyadav"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -99,7 +101,7 @@ function Hero() {
             </a>
 
             <a
-              href="https://x.com/"
+              href="https://x.com/karthikyannabathina"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="X"
@@ -108,7 +110,7 @@ function Hero() {
             </a>
 
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/karthikyannabathina/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
