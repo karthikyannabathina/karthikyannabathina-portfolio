@@ -6,6 +6,8 @@ const projects = [
     title: "TradeX",
     category: "Full Stack · Trading Platform",
 
+    image: "/tradex.png",
+
     description:
       "A full-stack trading platform inspired by modern brokerage applications, built with a real-time market simulation and a modular backend architecture.",
 
