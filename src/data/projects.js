@@ -44,6 +44,51 @@ const projects = [
   },
 
   {
+  id: "grounded-ai",
+  title: "Grounded AI",
+  category: "Full Stack · AI / RAG",
+
+  image: "/grounded-ai.png",
+
+  description:
+    "A production-oriented document intelligence platform that retrieves relevant information from uploaded documents and generates grounded answers using local AI inference.",
+
+  featured: true,
+
+  technologies: [
+    "React",
+    "Node.js",
+    "Express",
+    "TypeScript",
+    "Hugging Face",
+    "Ollama",
+    "MongoDB",
+    "BM25",
+    "RAG",
+    "Docker",
+  ],
+
+  highlights: [
+    "PDF and Markdown document ingestion",
+    "Hybrid vector + BM25 retrieval",
+    "Cross-encoder reranking",
+    "Local Hugging Face embeddings",
+    "Local Ollama LLM inference",
+    "Grounded answer verification",
+    "Source citations with retrieval scores",
+    "Streaming AI responses",
+    "Document upload and management",
+    "Production deployment with Vercel and Render",
+  ],
+
+  github:
+    "https://github.com/karthikyannabathina/grounded-ai",
+
+  live:
+    "https://grounded-ai-frontend.vercel.app",
+},
+
+  {
     id: "shoppy",
     title: "Shoppy",
     category: "Backend · E-Commerce",

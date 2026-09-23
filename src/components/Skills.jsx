@@ -21,12 +21,23 @@ import {
   SiJest,
 } from "react-icons/si";
 
+import {
+  FiArrowUpRight,
+  FiCode,
+  FiDatabase,
+  FiServer,
+  FiSettings,
+  FiCheck,
+} from "react-icons/fi";
+
 const skillGroups = [
   {
     number: "01",
     title: "Frontend",
+    label: "INTERFACE ENGINEERING",
     description:
-      "Building responsive and interactive user interfaces.",
+      "Building responsive, accessible, and interactive interfaces with modern JavaScript.",
+    icon: FiCode,
     skills: [
       { name: "HTML5", icon: SiHtml5 },
       { name: "CSS3", icon: SiCss },
@@ -44,8 +55,10 @@ const skillGroups = [
   {
     number: "02",
     title: "Backend",
+    label: "SERVER ENGINEERING",
     description:
-      "Designing APIs, authentication, validation, and server-side systems.",
+      "Designing APIs, authentication, validation, and server-side application systems.",
+    icon: FiServer,
     skills: [
       { name: "Node.js", icon: SiNodedotjs },
       { name: "Express.js", icon: SiExpress },
@@ -60,8 +73,10 @@ const skillGroups = [
   {
     number: "03",
     title: "Databases & Data",
+    label: "DATA ENGINEERING",
     description:
-      "Working with persistent storage, caching, and data modeling.",
+      "Working with persistent storage, caching, data modeling, and application data.",
+    icon: FiDatabase,
     skills: [
       { name: "MongoDB", icon: SiMongodb },
       { name: "MongoDB Atlas", icon: SiMongodb },
@@ -74,8 +89,10 @@ const skillGroups = [
   {
     number: "04",
     title: "Tools & Infrastructure",
+    label: "DEVELOPER WORKFLOW",
     description:
-      "Development, API testing, containerization, and collaboration.",
+      "Using modern tooling for development, API testing, containers, and collaboration.",
+    icon: FiSettings,
     skills: [
       { name: "Git", icon: SiGit },
       { name: "GitHub", icon: SiGithub },
@@ -89,8 +106,10 @@ const skillGroups = [
   {
     number: "05",
     title: "Testing & Engineering",
+    label: "QUALITY & RELIABILITY",
     description:
-      "Writing maintainable code and building reliable backend systems.",
+      "Writing maintainable code and building reliable, testable application systems.",
+    icon: FiCheck,
     skills: [
       { name: "Jest", icon: SiJest },
       { name: "Unit Testing", icon: null },
@@ -107,56 +126,119 @@ function Skills() {
     <section id="skills" className="section skills">
       <div className="container">
 
-        <div className="skills__header">
-          <p className="section-label">02 — Skills</p>
+        {/* HEADER */}
 
-          <h2 className="section-title">
-            Technologies I use to
-            <span> build software.</span>
-          </h2>
+        <div className="skills__header">
+          <div className="skills__eyebrow">
+            <span className="skills__eyebrow-line"></span>
+            <p className="section-label">02 — SKILLS</p>
+          </div>
+
+          <div className="skills__heading-row">
+            <h2 className="section-title">
+              Technologies I use to
+              <span> build software.</span>
+            </h2>
+
+            <div className="skills__index">
+              <span>STACK</span>
+              <strong>05</strong>
+            </div>
+          </div>
 
           <p className="section-description">
-            My development stack spans frontend interfaces, backend
-            services, databases, real-time systems, and development
+            A practical full-stack toolkit covering interfaces, APIs,
+            databases, real-time systems, testing, and developer
             infrastructure.
           </p>
         </div>
 
+        {/* SKILL SYSTEM */}
+
         <div className="skills__grid">
-          {skillGroups.map((group) => (
-            <article
-              className="skill-group"
-              key={group.number}
-            >
-              <div className="skill-group__top">
-                <span>{group.number}</span>
-                <h3>{group.title}</h3>
-              </div>
+          {skillGroups.map((group) => {
+            const GroupIcon = group.icon;
 
-              <p className="skill-group__description">
-                {group.description}
-              </p>
+            return (
+              <article
+                className="skill-group"
+                key={group.number}
+              >
+                {/* CARD TOP */}
 
-              <div className="skill-group__list">
-                {group.skills.map((skill) => {
-                  const Icon = skill.icon;
+                <div className="skill-group__top">
+                  <div className="skill-group__number">
+                    {group.number}
+                  </div>
 
-                  return (
-                    <span
-                      key={skill.name}
-                      className="skill-item"
-                    >
-                      {Icon && (
-                        <Icon className="skill-item__icon" />
-                      )}
+                  <div className="skill-group__icon">
+                    <GroupIcon />
+                  </div>
 
-                      {skill.name}
-                    </span>
-                  );
-                })}
-              </div>
-            </article>
-          ))}
+                  <div className="skill-group__heading">
+                    <span>{group.label}</span>
+                    <h3>{group.title}</h3>
+                  </div>
+
+                  <FiArrowUpRight className="skill-group__arrow" />
+                </div>
+
+                {/* DESCRIPTION */}
+
+                <p className="skill-group__description">
+                  {group.description}
+                </p>
+
+                {/* SKILLS */}
+
+                <div className="skill-group__list">
+                  {group.skills.map((skill) => {
+                    const Icon = skill.icon;
+
+                    return (
+                      <span
+                        key={skill.name}
+                        className="skill-item"
+                      >
+                        {Icon ? (
+                          <Icon className="skill-item__icon" />
+                        ) : (
+                          <span className="skill-item__dot" />
+                        )}
+
+                        <span className="skill-item__name">
+                          {skill.name}
+                        </span>
+                      </span>
+                    );
+                  })}
+                </div>
+
+                {/* CARD FOOTER */}
+
+                <div className="skill-group__footer">
+                  <span>TECHNOLOGY GROUP</span>
+
+                  <span>
+                    {String(group.skills.length).padStart(2, "0")} SKILLS
+                  </span>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+
+        {/* BOTTOM SYSTEM BAR */}
+
+        <div className="skills__bottom">
+          <span>ENGINEERING STACK / 2026</span>
+
+          <div className="skills__bottom-line"></div>
+
+          <span>
+            FULL STACK DEVELOPMENT
+            <FiArrowUpRight />
+          </span>
         </div>
 
       </div>
