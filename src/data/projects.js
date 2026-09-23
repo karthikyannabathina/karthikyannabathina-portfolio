@@ -181,6 +181,29 @@ const projects = [
 
     live: "",
   },
+  {
+  id: "portfolio",
+  title: "Portfolio Website",
+  category: "Personal / Portfolio",
+  description:
+    "A premium developer portfolio designed to showcase my engineering work, open-source contributions, technical skills, and projects.",
+  technologies: [
+    "React",
+    "JavaScript",
+    "CSS",
+    "Vite"
+  ],
+  highlights: [
+    "Premium responsive UI",
+    "Open-source contributions",
+    "Project showcase",
+    "Developer-focused architecture"
+  ],
+  live: "YOUR_LIVE_URL",
+  github: "YOUR_GITHUB_URL",
+  featured: true,
+  image: null
+},
 ];
 
 export default projects;
