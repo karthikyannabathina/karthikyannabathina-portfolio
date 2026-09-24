@@ -54,19 +54,14 @@ function Navbar() {
 
         <div className="navbar__right">
 
-          <button
-            className="navbar__theme"
-            aria-label="Toggle theme"
-          >
-            ☼
-          </button>
-
           <a
-            href="#contact"
+            href="/Karthik_Yannabathina_Mern_Resume.pdf"
             className="navbar__cta"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Resume
-            <span>↓</span>
+            <span>↗</span>
           </a>
 
         </div>

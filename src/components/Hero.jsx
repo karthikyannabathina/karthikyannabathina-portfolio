@@ -1,9 +1,8 @@
 import {
   FaGithub,
   FaLinkedin,
-  FaInstagram,
 } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+
 import {
   SiReact,
   SiNodedotjs,
@@ -17,6 +16,7 @@ import {
 function Hero() {
   return (
     <section className="hero">
+
       {/* Background effects */}
       <div className="hero__grid" />
       <div className="hero__glow hero__glow--one" />
@@ -24,18 +24,32 @@ function Hero() {
 
       <div className="container hero__inner">
 
-        {/* ================================
-            LEFT CONTENT
-        ================================= */}
+        {/* LEFT CONTENT */}
 
         <div className="hero__content">
 
+          {/* EYEBROW */}
+
           <div className="hero__eyebrow">
+
             <span className="hero__badge-dot" />
+
             <span>Full Stack Developer</span>
+
             <span className="hero__eyebrow-line" />
-            <span className="hero__eyebrow-status">Available</span>
+
+            <span className="hero__eyebrow-status">
+              Available
+            </span>
+
+            <span className="hero__eyebrow-opportunity">
+              · Open to internships & full-time opportunities
+            </span>
+
           </div>
+
+
+          {/* TITLE */}
 
           <h1 className="hero__title">
             Building software
@@ -44,11 +58,15 @@ function Hero() {
             <span>real problems</span>
           </h1>
 
+
+          {/* DESCRIPTION */}
+
           <p className="hero__description">
             I build fast, reliable, and thoughtfully designed web
             products — from polished interfaces to scalable backend
-            systems and APIs
+            systems and APIs.
           </p>
+
 
           {/* ACTIONS */}
 
@@ -71,19 +89,13 @@ function Hero() {
 
           </div>
 
-          {/* AVAILABILITY */}
-
-          <div className="hero__availability">
-            <span className="hero__availability-dot" />
-            <span>Open to internships & full-time opportunities</span>
-          </div>
 
           {/* SOCIALS */}
 
           <div className="hero__socials">
 
             <a
-              href="https://github.com/karthhikyadav"
+              href="https://github.com/karthikyannabthina"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -100,32 +112,12 @@ function Hero() {
               <FaLinkedin />
             </a>
 
-            <a
-              href="https://x.com/karthikyannabathina"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="X"
-            >
-              <FaXTwitter />
-            </a>
-
-            <a
-              href="https://www.instagram.com/karthikyannabathina/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <FaInstagram />
-            </a>
-
           </div>
 
         </div>
 
 
-        {/* ================================
-            RIGHT DEVELOPER VISUAL
-        ================================= */}
+        {/* RIGHT DEVELOPER VISUAL */}
 
         <div className="hero__visual">
 
@@ -204,8 +196,7 @@ function Hero() {
                 <span className="code-variable">
                   app
                 </span>{" "}
-                =
-                {" "}
+                ={" "}
                 <span className="code-function">
                   express()
                 </span>
@@ -224,8 +215,7 @@ function Hero() {
                 <span className="code-string">
                   "/api"
                 </span>
-                ,
-                {" "}
+                ,{" "}
                 <span className="code-variable">
                   router
                 </span>
@@ -361,9 +351,7 @@ function Hero() {
       </div>
 
 
-      {/* ================================
-          TECHNOLOGY STRIP
-      ================================= */}
+      {/* TECHNOLOGY STRIP */}
 
       <div className="hero__technologies">
 

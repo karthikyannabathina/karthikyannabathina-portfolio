@@ -252,6 +252,33 @@ ol {
   letter-spacing: -0.02em;
 }
 
+/* LIGHT THEME */
+
+body.light-theme {
+  background: #ffffff;
+  color: #111111;
+}
+
+body.light-theme .navbar {
+  background: #ffffff;
+  color: #111111;
+}
+
+body.light-theme .navbar__brand-name,
+body.light-theme .navbar__links a {
+  color: #111111;
+}
+
+body.light-theme .navbar__theme {
+  color: #111111;
+  background: #f2f2f2;
+}
+
+body.light-theme .navbar__cta {
+  background: #111111;
+  color: #ffffff;
+}
+
 
 /* =========================================
    LINKS
@@ -491,6 +518,16 @@ ol {
   pointer-events: none;
 }
 
+.hero__eyebrow {
+  flex-wrap: wrap;
+}
+
+.hero__eyebrow-opportunity {
+  color: #56ff61;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
 
 /* =========================================
    GLOW

@@ -67,7 +67,7 @@ function Contact() {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/karthik-yannabathana/"
+              href="https://www.linkedin.com/in/karthik-yannabathina/"
               target="_blank"
               rel="noreferrer"
               className="contact__link"
@@ -85,7 +85,7 @@ function Contact() {
             </a>
 
             <a
-              href="/resume.pdf"
+              href="/Karthik_Yannabathina_Mern_Resume.pdf"
               target="_blank"
               rel="noreferrer"
               className="contact__link"
